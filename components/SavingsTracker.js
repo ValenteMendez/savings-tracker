@@ -1,8 +1,8 @@
 {/* Todo el código exactamente igual que proporcionaste, solo cambiando los textos de los botones */}
 import React, { useState, useEffect } from 'react';
 import { Calendar, Check, X, Trash2, Clock, User } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { Alert, AlertDescription } from '../components/ui/alert';
 
 const USERS = [
   { id: 'ETS', name: 'ETS' },

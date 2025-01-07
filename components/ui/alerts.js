@@ -1,6 +1,5 @@
-// components/ui/alert.jsx
 import * as React from "react"
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 
 const Alert = React.forwardRef(({ className, variant, ...props }, ref) => (
   <div

@@ -22,7 +22,7 @@ const SavingsTracker = () => {
 
   // Cargar datos al cambiar de usuario
   useEffect(() => {
-    const savedData = localStorage.getItem(`savings-${currentUser}`);
+    const savedData = localStorage.getItem(`savings-2026-${currentUser}`);
     if (savedData) {
       const { days, numbers } = JSON.parse(savedData);
       setSavedDays(days);
@@ -37,7 +37,7 @@ const SavingsTracker = () => {
       const initialDays = Array.from(initialNumbers).map((num, index) => ({
         id: index + 1,
         dayNumber: num,
-        date: new Date(2024, 0, index + 1),
+        date: new Date(2026, 0, index + 1),
         completed: false
       }));
 
@@ -49,7 +49,7 @@ const SavingsTracker = () => {
 
   // Guardar datos en localStorage
   const saveToLocalStorage = (days, numbers) => {
-    localStorage.setItem(`savings-${currentUser}`, JSON.stringify({
+    localStorage.setItem(`savings-2026-${currentUser}`, JSON.stringify({
       days,
       numbers
     }));

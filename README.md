@@ -1,4 +1,4 @@
-# Savings Tracker 2025
+# Savings Tracker 2026
 
 Originally intended as a tool to track savings for the year, this app has been repurposed to track the number of days saved for each user.
 

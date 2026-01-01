@@ -189,10 +189,10 @@ const SavingsTracker = () => {
     });
   };
 
-  // Calcular la suma total solo de días completados
+  // Calcular la suma total solo de días completados (multiplicado por 3)
   const totalSum = savedDays
     .filter(day => day.completed)
-    .reduce((sum, day) => sum + day.dayNumber, 0);
+    .reduce((sum, day) => sum + (day.dayNumber * 3), 0);
 
   return (
     <div className="max-w-3xl mx-auto p-4 space-y-4">
@@ -221,7 +221,7 @@ const SavingsTracker = () => {
             {currentRandomDay && (
               <div className="text-center bg-blue-50 p-6 rounded-lg">
                 <div className="text-5xl font-bold text-blue-600 mb-2">
-                  Hoy ${currentRandomDay}
+                  Hoy ${currentRandomDay * 3}
                 </div>
               </div>
             )}
@@ -315,7 +315,7 @@ const SavingsTracker = () => {
                         {day.completed ? <Check className="h-5 w-5" /> : <X className="h-5 w-5" />}
                       </button>
                       <div className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
-                        #{day.dayNumber}
+                        ${day.dayNumber * 3}
                       </div>
                       <div className="font-medium">
                         {formatDate(day.date)}
